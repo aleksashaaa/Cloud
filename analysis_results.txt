@@ -1,0 +1,77 @@
+--- Analysis of annual_report_utf8.txt ---
+
+### MERCENARY_SIGNALS ###
+  'requirement': 54 matches
+    Context: "...nternational  flight Almaty – Dubai 2003 European Aviation  Safety Agency’s (EASA)  Joint Aviation  Requirements (JAR) 145  certification received for  Engineering and  Maintenance 2007 Launch of freq..."
+    Context: "...c  infrastructures in Kazakhstan, while ensuring   we meet all relevant legislative and regulatory  requirements.  Mutual respect for our suppliers and business  partners is key to developing positive..."
+    Context: "...ng jobs and enhancing  infrastructure. Material needs  ► Compliance with legislation and regulatory requirements  ► Compliance with the anti-corruption legislation of the Republic   of Kazakhstan  ► B..."
+    Context: "...cantly  expand our international route network  ► Simplifying legislative procedures related to the requirement for  sanitary certificates for the entry of new aircraft into service Link to strategy L..."
+    Context: "...es    Providing measurable  and understandable data  to investors    Complying with  international  requirements for  sustainable development    Monitoring the ESG  agenda    Long-term financial   wel..."
+  'on time': 1 matches
+    Context: "...e performance or pilot  shortage. The risk of not being able to carry out regular flight operations on time due to  technical or external reasons can lead to significant costs and reputat ional  damag..."
+
+### MISSIONARY_SIGNALS ###
+  'outcome': 13 matches
+    Context: "...ers and business  partners is key to developing positive, long-term  relationships, with beneficial outcomes for all  parties.    Taxes paid in 2024 USD 102.3m Our employees are central to the Group’s..."
+    Context: "...f legislation and the  Code of Conduct  ► Feedback platform for mutual recognition among employees  Outcome of our engagement  ► In 2024, our employee engagement level was 4.02 out of   5 with a recor..."
+    Context: "...ges  ► Presentations to existing investors  ► Conference calls and webcasts ► Direct communication  Outcome of our engagement  ► There were five General Meetings of Shareholders in 2024.   For more in..."
+    Context: "...ys  ► ESG awards ► Inviting core suppliers to Company events (such as new aircraft  presentations)  Outcome of our engagement  ► Flexible supply-chain processes enabled us to re-route major supplies  ..."
+    Context: "...ups  ► Direct correspondence  ► Phone calls  ► Industry conferences and forums  ► Audits  ► Reports Outcome of our engagement  ► As part of the Interdepartmental Working Group under the Aviation  Admi..."
+  'solving': 3 matches
+    Context: "...ddition, the new international terminal at  Almaty airport has doubled capacity at our  main hub, resolving a key constraint on the  Group’s future growth.   The Group’s operational efficiency is  und..."
+    Context: "...e Group.  Direct supervisors, department heads and  overseeing business partners are involved in  resolving problems.  Additionally, we engage internal mediators to  facilitate the resolution of emplo..."
+    Context: "...and measures are developed  to minimise the risks arising from them. A  policy for preventing and resolving conflicts of  interest is also in place. The document outlines  the types and causes of conf..."
+
+### PROJECT_FUNDING ###
+  'annual budget': 6 matches
+    Context: "...he  territory of the Republic of Kazakhstan and a foreign state ► Approval of the Development Plan (Annual Budget) of the Company for 2025 ► Approval of the Development Plan (Business Plan) of the Com..."
+    Context: "...he President of FlyArystan JSC  ► Approving the restated Charter of FlyArystan JSC  ► Approving the Annual Budget of FlyArystan JSC for 2025  ► Approving the Business Plan of FlyArystan JSC for 2025-2..."
+    Context: "... strategy of the development, the  medium-term and short-term business plans (development plan  and annual budget) and major investment projects  ►  Reviewing the Company’s performance to budget, busi..."
+    Context: "...ss  operations of FlyArystan. In November 2024, the Committee  recommended approval of FlyArystan’s Annual Budget for 2025  and the Business Plan (Development Plan) for 2025–2029. The Committee has al..."
+    Context: "...r  dividends for 2023.  Looking to the future, the Committee recommended approval of  the Company’s Annual Budget for 2025 and the Business Plan  (Development Plan) for 2025–2029 as well as continuing..."
+
+### PRODUCT_FUNDING ###
+  (No matches found)
+
+### IT_MINDSET ###
+  'IT department': 1 matches
+    Context: "...iding 190 holiday  gifts and childrens’ travel kits.  Employee-led  initiatives Volunteers from the IT department took the initiative to collect and refu rbish 20 decommissioned system units and 20 mo..."
+  'information technology': 1 matches
+    Context: "... internal audit engagements, including tasks related to two areas of  continuous monitoring and two Information Technology audits.  All performed internal audit engagements related to high priority ar..."
+  'alignment': 11 matches
+    Context: "...024, the Air Astana Group revised its net-zero  commitment, moving its target from 2060 to 2050  in alignment with the global aviation industry’s  goals, rather than Kazakhstan’s national target.  Fol..."
+    Context: "...near-term targets  for the next five years. These targets will be independently verified,  ensuring alignment with the Paris Agreement’s  climate mitigation objectives. Additionally, in  accordance wi..."
+    Context: "... Following the Group’s IPO in 2024, we carried  out an additional materiality assessment to  ensure alignment with evolving stakeholder  expectations and market requirements. This  update reaffirmed t..."
+    Context: "...ormal range. In  2024, we updated the approach for the turnover  rate calculation to ensure greater alignment with  best practices. A total of 806 employees left the company during  the year (in 2023:..."
+    Context: "...nts. Training  materials from our Training Academy are  carefully designed to strengthen skills in  alignment with the HEART model. HEART values have become a living reflection  of the Company’s corpo..."
+
+### PRODUCT_MINDSET ###
+  (No matches found)
+
+### OUTPUT_METRICS ###
+  (No matches found)
+
+### OUTCOME_METRICS ###
+  'retention': 2 matches
+    Context: "...rn to  work in 2024 was 170 (in 2023: 233): male - 14  (in 2023: 14), female - 156 (in 2023: 219).  Retention rate in 2024 was 91% (in 2023: 69%):  male - 93% (in 2023: 67%), female - 91% (in  2023: 6..."
+    Context: "...elopment. Our talent management  programme focuses on search and selection,  talent development and retention, people  performance management, succession  planning and leadership development, and  cul..."
+  'engagement': 57 matches
+    Context: "...nd the  Code of Conduct  ► Feedback platform for mutual recognition among employees  Outcome of our engagement  ► In 2024, our employee engagement level was 4.02 out of   5 with a record high number o..."
+    Context: "...platform for mutual recognition among employees  Outcome of our engagement  ► In 2024, our employee engagement level was 4.02 out of   5 with a record high number of respondents – 3,071 ► The engageme..."
+    Context: "...mployee engagement level was 4.02 out of   5 with a record high number of respondents – 3,071 ► The engagement ratio, which is the second most important  indicator, was 4.17 engaged employees for each..."
+    Context: "...tions to existing investors  ► Conference calls and webcasts ► Direct communication  Outcome of our engagement  ► There were five General Meetings of Shareholders in 2024.   For more information, plea..."
+    Context: "...ings of Shareholders in 2024.   For more information, please refer to pages 102-103  ► Our numerous engagement with capital market participants,  including existing investors and analysts allows   to ..."
+  'customer satisfaction': 2 matches
+    Context: "...ahead in 2025. We will be  making comprehensive enhancements across key areas that directly  affect customer satisfaction and service quality. Sustainability and ESG  principles also remain at the hea..."
+    Context: "... Seat Kilometre CEET Cabin Emergency Evacuation Trainers CRMS Corporate Risk Management System CSAT Customer Satisfaction Ratings CTK Cargo tonne-kilometres E&M Engineering and Maintenance EASA Europe..."
+  'NPS': 3 matches
+    Context: "...ated Annual Report 2024 Measurable experience insights: ► Air Astana achieved a net promoter score (NPS) of 41 and a  customer-satisfaction score (CSAT) of 75, based on more than  17,300 responses fro..."
+    Context: "...light survey, FlyArystan covered more than 37,000  passengers in 2024. Based on the rates obtained, NPS was 32 and  CSAT was 83. Again, in this score range, the airline has more  promoters than passiv..."
+    Context: "...cator LCC Low-cost carrier LCDP Low-Carbon Development Programme MRO Maintenance, Repair, Overhaul  NPS Net Promoter Score RPK Revenue Passengers Kilometres SCAA State Civil Aviation Agency About this..."
+  'net promoter score': 2 matches
+    Context: "... ASTANA GROUP Integrated Annual Report 2024 Measurable experience insights: ► Air Astana achieved a net promoter score (NPS) of 41 and a  customer-satisfaction score (CSAT) of 75, based on more than  ..."
+    Context: "...r LCC Low-cost carrier LCDP Low-Carbon Development Programme MRO Maintenance, Repair, Overhaul  NPS Net Promoter Score RPK Revenue Passengers Kilometres SCAA State Civil Aviation Agency About this rep..."
+  'conversion': 3 matches
+    Context: "...tral Asia and the Caucasus     Launch the new app     Lobby for Jet-A1 production in Kazakhstan and conversion of key airports    Participate in IATA’s Integrated Sustainability Programme – Sustainabl..."
+    Context: "...sed on methodologies aligned with the Intergovernmental Panel on Climate Change (IPCC)  Guidelines. Conversion factors for each energy source are derived from IPCC and internationally  recognized stan..."
+    Context: "...ency of the financial liability  ► change in collateral or other credit enhancement  ► inclusion of conversion option  ► change in the subordination of the financial liability For the quantitative ass..."

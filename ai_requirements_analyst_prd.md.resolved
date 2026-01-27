@@ -1,0 +1,84 @@
+# Product Requirements Document (PRD): AI Requirements Analyst Agent for Air Astana
+
+| **Version** | **Date**       | **Author**          | **Status** |
+|-------------|----------------|---------------------|------------|
+| 1.0         | Jan 27, 2026   | Product Management  | Draft      |
+
+---
+
+## 1. Job to be Done (JTBD)
+
+**User Persona:** Nurzhan, Requirements Analyst at Air Astana.
+**Situation:** Facing tight deadlines with complex stakeholder inputs (email threads, meeting notes, legacy docs) while needing to produce precise technical specifications for IT.
+**Core Motivation:** "I want to stop being a glorified scribe formatting documents and start being a strategic analyst."
+
+> **JTBD Statement:**
+> "When **I have scattered requirements from multiple business stakeholders**, I want to **instantly transform them into structured, unambiguous developer specifications**, so that **I can eliminate weeks of documentation 'grunt work' and prevent costly misunderstandings during development.**"
+
+---
+
+## 2. Problem Summary
+
+Air Astana’s product delivery is bottlenecked by the "Translation Gap" between Business and IT.
+
+1.  **Documentation Overhead:** Analysts spend ~80% of time on formatting and compilation rather than analysis.
+2.  **Context Loss:** The "Why" (Business Value) is stripped away during the conversion to the "What" (Technical Spec), leading to mercenary-style execution.
+3.  **Ambiguity:** Natural language requirements ("make it fast") are misinterpreted by developers ("optimized backend but slow UI"), causing rework.
+4.  **Static Handoffs:** reliance on static PDFs/Docs means specifications are dead on arrival and prone to version control issues.
+
+---
+
+## 3. Functional Requirements for the AI Agent
+
+The AI Agent acts as an intelligent middleware between Business Input and Technical Output.
+
+### 3.1 Unstructured Input Ingestion
+*   **Description:** The agent must accept raw inputs in various formats without requiring manual pre-structuring.
+*   **Capabilities:**
+    *   Ingest email threads, meeting transcripts (Teams/Zoom), and raw notes.
+    *   Parse highly technical airline domain acronyms (e.g., PNR, DCS, SSR).
+    *   Identify conflicting requirements across different input sources.
+
+### 3.2 "The Ambiguity Hunter" (Clarification Engine)
+*   **Description:** Before finalizing specs, the agent actively identifies vague terms and prompts the analyst for definition.
+*   **Capabilities:**
+    *   Detects relative terms (e.g., "fast", "user-friendly", "robust") and prompts for quantifiable metrics (e.g., " < 200ms", "Zero downtime during deployment").
+    *   Flags missing edge cases (e.g., "What happens if the flight is cancelled?").
+
+### 3.3 Automated User Story Generation
+*   **Description:** Converts consolidated requirements into standard Agile User Stories with Acceptance Criteria.
+*   **Output Format:**
+    *   **User Story:** `As a [Persona], I want [Action], so that [Benefit].`
+    *   **Acceptance Criteria:** Gherkin syntax (`Given/When/Then`) or checklist format.
+*   **Value Add:** Automatically links the "So that [Benefit]" back to the strategic business goal, preserving context.
+
+### 3.4 Bi-Directional Translation Layer
+*   **Description:** Generates two distinct views on the same data set.
+    *   **Business View:** Focuses on ROI, UX flow, and timeline.
+    *   **Developer View:** Focuses on API constraints, data fields, and edge cases.
+*   **Goal:** Ensures Marketing and IT agree on the *product* even if they read different *documents*.
+
+### 3.5 "Living Spec" API
+*   **Description:** The requirements should not just be a static text file.
+*   **Capabilities:**
+    *   Export to Jira/Confluence/Azure DevOps automatically.
+    *   Versioning: "If I change this requirement, what other stories break?" (Change Impact Analysis).
+
+---
+
+## 4. Expected Outcomes (Success Metrics)
+
+| Metric | Target Impact |
+| :--- | :--- |
+| **Cycle Time (Concept to Ready-for-Dev)** | Reduce from **3 weeks** to **3 days** |
+| **Rework Rate** | Decrease rework due to "misunderstood requirements" by **50%** |
+| **Analyst Satisfaction** | Nurzhan spends **>50%** of time on Analysis (vs. formatting) |
+| **Defect Density** | Reduced ambiguous logic bugs in UAT |
+
+---
+
+## 5. Constraints & Notes
+
+*   **Human-in-the-Loop:** The AI is a **copilot**, not an autopilot. Nurzhan must review and approve all generated specifications. The AI does not make business decisions.
+*   **Security:** Data must not leave Air Astana’s secure tenancy (Private Cloud deployment required).
+*   **Organizational Limits:** The AI can optimize the *handoff*, but it cannot fix broken organizational reporting lines or lack of product strategy (Project vs Product funding model).

@@ -1,0 +1,33 @@
+
+**TO:** Board of Directors, Air Astana Joint Stock Company
+**FROM:** External Product Transformation Auditor
+**DATE:** January 22, 2026
+**SUBJECT:** Diagnostic of Product Operating Model Maturity
+
+**1. EXECUTIVE SUMMARY**
+Based on the 2024 Annual Report, Air Astana is classified as a **Digital Immigrant** operating primarily in "IT Service Mode." While the organization strongly tracks high-level customer outcomes (NPS/CSAT), the execution machinery remains rooted in traditional annual budgeting and project-based management, lacking the continuous "Product" structures required for true digital agility.
+
+**2. EVIDENCE OF "FEATURE FACTORY" BEHAVIOR (RISKS)**
+The following signals indicate an outdated "IT Project" mindset rather than a modern "Product Operating Model":
+
+1.  **Annual Budgeting for Development:** The report explicitly links the "Development Plan" to the "Annual Budget" (e.g., *"Approval of the Development Plan (Annual Budget) of the Company"*).
+    *   *Risk:* This "Project Funding" model locks scope and cost early, preventing teams from adapting to customer feedback throughout the year. Innovation requires continuous funding, not annual batches.
+2.  **IT as a Siloed Department:** The report references *"Volunteers from the IT department,"* positioning technology as a distinct back-office function rather than a core business driver.
+    *   *Risk:* In a product model, technology *is* the business. Treating IT as a separate "department" creates handoffs, delays, and a "Mercenary" culture where developers just build what they are told.
+3.  **Zero "Product Management" Presence:** Across the entire report, there are **0 mentions** of "Product Management" or "Product Teams."
+    *   *Risk:* Without dedicated Product Managers to address *Value* and *Viability*, the company likely relies on business stakeholders to dictate requirements, leading to low-value features that don't solve underlying customer problems.
+4.  **"Requirements" vs. Discovery:** The text emphasizes meeting "requirements" (54 mentions) with zero mention of "Product Discovery" or "hypotheses."
+    *   *Risk:* This suggests a deterministic approach ("Building to Spec") rather than an outcome-based approach ("Solving Problems"), significantly increasing the risk of building things no one uses.
+5.  **Output-Based Planning:** The "Development Plan" structure suggests a list of deliverables approved in advance.
+    *   *Risk:* This incentivizes "delivering on time" (Output) over "improving retention/revenue" (Outcome).
+
+**3. STRATEGIC DISCONNECTS**
+The Board reviews specific "Business Plans" and "Investment Projects," yet the company relies on **NPS (Net Promoter Score)** and **CSAT** as key performance indicators.
+*   *The Disconnect:* You are measuring *Outcomes* (NPS 41, CSAT 75) but funding *Outputs* (Annual Budgets/Projects). You cannot consistently drive customer satisfaction outcomes if teams are incentivized solely to deliver a fixed list of project requirements approved 12 months prior.
+
+**4. THE PRESCRIPTION**
+To shift from a Project-based "Feature Factory" to a high-performing Product Organization, the Board must:
+
+*   **Shift from Project to Product Funding:** Move digital initiatives from annual "project budgets" to persistent "product team expectations." Fund the *team* and the *outcome* (e.g., "Improve Mobile App Booking Conversion"), not the specific feature list.
+*   **Establish a Product Management Function:** Hire meaningful Product leadership. Technology teams need Product Managers empowered to decide *what* to build based on customer evidence, not just IT managers delivering business requests.
+*   **Unify Business & Technology:** Dissolve the "IT Department" wall. Embed engineers into cross-functional teams aligned to customer journeys (e.g., "Booking Experience Team," "Loyalty Team") rather than technology layers.
