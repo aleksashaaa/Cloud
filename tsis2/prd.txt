@@ -1,0 +1,94 @@
+Product Requirements Document (PRD)
+Project: Secure Password Validator and Storage
+1. Objective
+
+The goal is to implement a secure password validation and storage system in Python.
+The system must validate password strength and securely store the password.
+
+The solution must follow security best practices and handle all edge cases safely.
+
+2. Functional Requirements
+2.1 Password Validation Function
+
+Implement a function:
+
+validate_password(password)
+
+
+The function must:
+
+Accept a password as input.
+Return a descriptive error message if validation fails.
+Return "Password is valid" if the password meets all requirements.
+
+Must not crash if:
+
+password is empty
+password is None
+password is not a string
+
+2.2 Password Strength Requirements
+
+The password must:
+
+Be at least 8 characters long.
+Contain at least one uppercase letter (A-Z).
+Contain at least one lowercase letter (a-z).
+Contain at least one digit (0-9).
+Contain at least one special character
+(Allowed: !@#$%^&*()-_+=<>?/)
+Must not contain spaces.
+Must not contain only repeated characters (e.g., "aaaaaaaa").
+
+Validation should preferably use regular expressions.
+
+2.3 Secure Password Storage
+
+After successful validation:
+The password must be hashed before storage.
+Plain-text passwords must never be stored.
+Use a secure hashing method (e.g., hashlib with SHA-256 or better).
+The hash must be returned instead of the original password.
+The system must prevent exposure of raw password values in logs or prints.
+
+2.4 Error Handling
+
+The system must:
+Handle empty input safely.
+Handle None input safely.
+Handle non-string input safely.
+Not crash under any invalid input.
+Always return a meaningful message.
+
+3. Security Requirements
+
+The implementation must:
+
+Not store plain-text passwords.
+Not print passwords to console.
+Not expose internal hashing logic unnecessarily.
+Use secure hashing practices.
+
+4. Output Behavior
+
+If password is invalid:
+
+Return a clear message explaining the reason. Example:
+
+"Password must contain at least one digit."
+"Password must be at least 8 characters long."
+
+If password is valid:
+
+Return:
+
+"Password is valid"
+and the hashed version of the password
+
+5. Non-Functional Requirements
+
+Code must be readable and well structured.
+Functions must have clear names.
+No hardcoded test passwords.
+The solution must be safe and production-ready.
+The system must not rely on external insecure libraries.
