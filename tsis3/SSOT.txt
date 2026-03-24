@@ -1,0 +1,191 @@
+CFO Bot
+1. System Overview
+1.1 Purpose
+CFO Bot is a web-based chatbot application that helps users estimate their monthly cloud computing costs in a simple and interactive way.
+The system allows users to enter expected usage (such as compute hours, storage, and data transfer), and then automatically calculates the total monthly cost based on predefined pricing models.
+CFO Bot provides:
+A clear breakdown of costs by component
+Step-by-step explanation of how the total cost is calculated
+An interactive chat interface for better user experience
+The main purpose of the system is to simulate the role of a “Chief Financial Officer (CFO)” by helping users understand and plan their cloud expenses before actually using cloud services.
+1.2 Objectives
+1. Accurate Cost Estimation
+The bot MUST calculate monthly cloud costs using predefined mathematical formulas and fixed pricing models.
+All calculations MUST be consistent and reproducible.
+2. Support for Multiple Cloud Components
+The bot MUST support different types of cloud resources, including:
+1.	Compute (virtual machines)
+2.	Storage
+3.	Network bandwidth
+4.	Database tiers
+3. Transparent and Explainable Results
+The system MUST not only return the final cost, but also show a detailed breakdown for each component and clearly explain how each value was calculated
+4. Robust Input Handling (Edge Cases)
+
+The system MUST handle incorrect or unexpected inputs, including:
+Negative numbers
+Missing values
+Invalid data types
+In such cases, the bot MUST return clear and helpful error messages instead of failing.
+2. Supported Cloud Components
+The CFO Bot SHALL support multiple cloud service components to simulate a realistic cloud cost estimation scenario.
+Each component represents a common category of cloud infrastructure usage and MUST have:
+A clearly defined unit of measurement
+A fixed pricing model
+A deterministic cost calculation method
+The system MUST calculate each component independently and then aggregate them into a total monthly cost.
+2.1 Compute (Virtual Machines)
+Description:
+Compute represents the cost of running virtual machines (VMs) in the cloud.
+Unit:
+Hours per month
+User Input:
+Number of compute hours (integer ≥ 0)
+Assumptions:
+The system assumes a constant hourly rate
+2.2 Storage
+Description:
+Storage represents the cost of storing data in the cloud.
+Unit:
+Gigabytes (GB) per month
+User Input:
+
+Total storage used in GB (integer ≥ 0)
+2.3 Bandwidth 
+Description:
+Bandwidth represents the cost of transferring data out of the cloud to the internet.
+Unit:
+Gigabytes (GB) per month
+User Input:
+Data transfer volume in GB (integer ≥ 0)
+2.4 Database Tiers
+Description:
+This component represents managed database services with predefined pricing tiers.
+Available Tiers:
+Tier	Description	Monthly Cost
+Basic	Suitable for small applications, testing, and low traffic systems	$25
+Standart	
+Designed for medium- scale applications with moderate traffic
+	$50
+Premium	Intended for high-performance applications with heavy workloads	$100
+
+User Input:
+Selection of one database tier
+Assumptions:
+Each tier has a fixed monthly cost
+2.5 Component Integration Rules
+The system MUST follow these rules when combining components:
+All components are OPTIONAL except at least one input must be provided
+Each component MUST be calculated independently
+The final cost MUST be the sum of all selected components
+If a component is not selected, its cost MUST be treated as zero
+3. Pricing Configuration
+3.1 Pricing Table
+The system MUST use the following pricing configuration:
+Component	Unit	Price
+Compute	Per hour	$0.1
+Storage	Per GB/month	$0.02
+Bandwidth (Egress)	Per GB	$0.08
+(Based on Cloud Computing Cost Comparison 2026: AWS vs Azure vs GCP Pricing | CostSignals)
+3.2 Centralized Pricing Configuration
+All pricing values MUST be stored in a centralized configuration file: pricing.json
+Example structure:
+{
+  "compute_per_hour": 0.1,
+  "storage_per_gb": 0.02,
+  "bandwidth_per_gb": 0.08,
+  "database": {
+   	 "tier1": 25,
+    	"tier2": 50,
+    	"tier3": 100  }
+}
+Pricing values MUST NOT be hardcoded in business logic
+All calculations MUST reference the pricing configuration file
+4. Mathematical Cost Models
+The system need to calculate the monthly cloud cost using deterministic mathematical formulas based on user inputs and predefined pricing values.
+All calculations MUST:
+Be consistent and reproducible
+Follow linear pricing rules
+Be independently verifiable through test cases
+Each cloud component MUST be calculated separately before computing the total cost.
+4.1 Variables
+The system use the following variables:
+Variable	Description	Unit
+Compute_Hours	Total VM usage time	hours
+Storage_GB	Total storage used	GB
+Bandwidth_GB	Data transferred (egress)	GB
+Database_Tier	Selected database plan	enum
+
+ Compute Cost Model
+𝐶compute = Compute_Hours * compute_per_hour (from pricing model)
+ Storage Cost Model
+𝐶storage = Storage_GB * storage_per_gb (from pricing model)
+Bandwidth Cost Model
+𝐶bandwidth = Bandwidth_GB * bandwidth_per_gb (from pricing model)
+Database Cost Model
+𝐶database = database (from pricing model)
+Total Monthly Cost
+Cost = 𝐶compute + 𝐶storage + 𝐶bandwidth + 𝐶database
+4.2 Rounding Rules
+All final outputs MUST be rounded to 2 decimal places
+Intermediate calculations should use full precision
+4.3 Deterministic Output
+Given the same input, the system MUST always return the same result.
+4.4 Edge Case Handling
+Case	Behavior
+Zero usage	Total cost = database cost (if selected)
+All inputs zero	Total cost = $0
+Large values	No overflow, correct scaling
+Missing optional fields	Treated as 0
+
+5. System Architecture
+The CFO Bot system MUST follow a simplified 3-tier architecture, separating the application into three logical layers:
+Presentation Layer (Frontend)
+Responsibilities:
+•	Provide chat-based interface
+•	Collect user inputs
+•	Display cost breakdown
+•	Show error messages
+Application Layer (Backend)
+Responsibilities:
+•	Validate user input
+•	Execute cost calculations
+•	Apply pricing configuration
+•	Return structured responses
+Data Layer
+pricing.json (central configuration file)
+Responsibilities:
+•	Store all pricing values
+•	Provide a single source for cost parameters
+6. UI/UX Requirements
+The CFO Bot SHALL provide a simple, intuitive, and user-friendly chat interface that allows users to easily estimate cloud costs.
+The design MUST prioritize clarity, ease of use, fast interaction
+6.1 Interface Requirements
+The system MUST include:
+Chat-style interface 
+Input prompts for user data
+Structured cost output
+Error messages for invalid input
+6.2 User Interaction Flow
+1.	User opens the web application
+2.	Bot greets the user, and asks for input (compute, storage, etc.)
+3.	User provides values
+4.	Bot calculates cost
+5.	Bot displays detailed breakdown
+6.3 Output Format Requirements
+The bot MUST display results in a structured format:
+
+Example:
+Compute Cost: $5.00
+Storage Cost: $15.00
+Bandwidth Cost: $20.00
+Database Cost: $50.00
+
+Total Monthly Cost: $90.00
+6.4 Error Handling UX
+The system MUST:
+Show clear error messages
+Explain what went wrong
+Suggest correct input
+Example:
+“Invalid input: Storage must be a positive number.”

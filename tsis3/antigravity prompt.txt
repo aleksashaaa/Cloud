@@ -1,0 +1,35 @@
+You are an expert software engineer and technical writer. I will provide you with a complete SSOT (Single Source of Truth) for a web-based CFO Bot that calculates monthly cloud costs based on user input. 
+
+Your task is to generate **two separate documents**:
+
+1. **Implementation Plan**
+   - Describe how to implement the CFO Bot system based on the SSOT.
+   - Include all modules and components described in the SSOT (frontend, backend, pricing engine, chat interface, Firebase integration).
+   - Provide a step-by-step development plan:
+     - Project setup
+     - Creating pricing configuration
+     - Implementing cost calculation logic
+     - Building the chat interface
+     - Integrating backend (Firebase Functions)
+     - Testing
+     - Deployment
+   - Include the technology stack for each module (React for frontend, Firebase Functions for backend, JSON for pricing configuration, Firebase Hosting).
+   - Describe data flow from user input to cost output.
+   - Highlight any constraints or architectural rules from the SSOT.
+   - Present it in a clear, structured, and professional format.
+
+2. **Test Specification**
+   - Create test cases to verify the correctness of all cost calculations.
+   - Cover each component individually (Compute, Storage, Bandwidth, Database tiers, optional AI usage if included).
+   - Include at least one **full system test** combining all components.
+   - Include **edge case tests**: negative input, zero usage, missing input, extremely large values.
+   - Format each test case as a table with columns: Input, Expected Output, Description.
+   - Ensure the tests directly reflect the formulas and pricing defined in the SSOT.
+   - Present it in a professional and structured format suitable for project documentation.
+
+**Important:**  
+- Do NOT generate any code. Only produce the two documents (Implementation Plan and Test Specification).  
+- Follow the SSOT exactly; do not invent new components or pricing.  
+- Be precise, professional, and structured.  
+
+SSOT
