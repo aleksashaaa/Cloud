@@ -4,16 +4,17 @@ CFO Bot
 CFO Bot is a web-based chatbot application that helps users estimate their monthly cloud computing costs in a simple and interactive way.
 The system allows users to enter expected usage (such as compute hours, storage, and data transfer), and then automatically calculates the total monthly cost based on predefined pricing models.
 CFO Bot provides:
-A clear breakdown of costs by component
-Step-by-step explanation of how the total cost is calculated
-An interactive chat interface for better user experience
+A clear breakdown of costs by component across multiple cloud platforms (AWS, Azure, GCP, local providers)
+Step-by-step interactive flows to calculate the total cost
+An interactive chat interface with usage presets (Startup, Growth, Enterprise)
+An integrated AI Chat Assistant powered by OpenAI to answer cloud-related questions
 The main purpose of the system is to simulate the role of a “Chief Financial Officer (CFO)” by helping users understand and plan their cloud expenses before actually using cloud services.
 1.2 Objectives
 1. Accurate Cost Estimation
 The bot MUST calculate monthly cloud costs using predefined mathematical formulas and fixed pricing models.
 All calculations MUST be consistent and reproducible.
-2. Support for Multiple Cloud Components
-The bot MUST support different types of cloud resources, including:
+2. Support for Multiple Cloud Platforms and Components
+The bot MUST support multiple providers (e.g., AWS, Azure, GCP, PS Cloud, Qaztelecom) in multiple currencies (USD, KZT) for various cloud resources, including:
 1.	Compute (virtual machines)
 2.	Storage
 3.	Network bandwidth
@@ -80,27 +81,22 @@ Each component MUST be calculated independently
 The final cost MUST be the sum of all selected components
 If a component is not selected, its cost MUST be treated as zero
 3. Pricing Configuration
-3.1 Pricing Table
-The system MUST use the following pricing configuration:
-Component	Unit	Price
-Compute	Per hour	$0.1
-Storage	Per GB/month	$0.02
-Bandwidth (Egress)	Per GB	$0.08
-(Based on Cloud Computing Cost Comparison 2026: AWS vs Azure vs GCP Pricing | CostSignals)
+3.1 Multi-Platform Pricing Table
+The system MUST use a multi-platform pricing configuration supporting AWS, Azure, GCP, and local providers (PS Cloud, Qaztelecom), enabling multi-currency calculations (USD and KZT).
 3.2 Centralized Pricing Configuration
-All pricing values MUST be stored in a centralized configuration file: pricing.json
-Example structure:
+All pricing values MUST be stored in a centralized configuration file (Pricing.js module and/or pricing.json).
+Example platform structure:
 {
-  "compute_per_hour": 0.1,
-  "storage_per_gb": 0.02,
-  "bandwidth_per_gb": 0.08,
-  "database": {
-   	 "tier1": 25,
-    	"tier2": 50,
-    	"tier3": 100  }
+  "platforms": {
+    "aws": {
+      "name": "Amazon Web Services (AWS)",
+      "currency": "USD",
+      "compute_per_hour": 0.096,
+      ...
+    }
+  }
 }
-Pricing values MUST NOT be hardcoded in business logic
-All calculations MUST reference the pricing configuration file
+Pricing values MUST NOT be hardcoded in the calculation logic. All calculations MUST dynamically reference the currently selected platform's pricing parameters from the configuration.
 4. Mathematical Cost Models
 The system need to calculate the monthly cloud cost using deterministic mathematical formulas based on user inputs and predefined pricing values.
 All calculations MUST:
@@ -139,36 +135,35 @@ Large values	No overflow, correct scaling
 Missing optional fields	Treated as 0
 
 5. System Architecture
-The CFO Bot system MUST follow a simplified 3-tier architecture, separating the application into three logical layers:
-Presentation Layer (Frontend)
+The CFO Bot system MUST follow a client-side architecture (Frontend-driven), separating logic locally to eliminate server costs and cold starts:
+Presentation & Client-Side Logic (React/Vite)
 Responsibilities:
-•	Provide chat-based interface
-•	Collect user inputs
-•	Display cost breakdown
-•	Show error messages
-Application Layer (Backend)
+•	Provide chat-based UI and AI Assistant integration
+•	Collect and locally validate user inputs
+•	Dynamically calculate costs strictly in the browser using the pricing configuration
+•	Render stateful cost breakdowns instantly
+Data & Settings Layer
+pricing.js / pricing.json
 Responsibilities:
-•	Validate user input
-•	Execute cost calculations
-•	Apply pricing configuration
-•	Return structured responses
-Data Layer
-pricing.json (central configuration file)
+•	Store all platform pricing values
+•	Provide a single source of truth for platform tiers and pricing constants
+External APIs
+OpenAI API
 Responsibilities:
-•	Store all pricing values
-•	Provide a single source for cost parameters
+•	Provide conversational AI responses for the chat feature
 6. UI/UX Requirements
-The CFO Bot SHALL provide a simple, intuitive, and user-friendly chat interface that allows users to easily estimate cloud costs.
+The CFO Bot SHALL provide a simple, intuitive, and user-friendly chat interface that allows users to seamlessly estimate cloud costs and query AI for guidance.
 The design MUST prioritize clarity, ease of use, fast interaction
 6.1 Interface Requirements
 The system MUST include:
-Chat-style interface 
-Input prompts for user data
-Structured cost output
+Chat-style interface with a main menu (Calculate vs AI Chat)
+Usage presets (Startup, Growth, Enterprise) for fast estimation
+Custom Input prompts for specific component data
+Structured cost output comparing estimates based on the chosen platform
 Error messages for invalid input
 6.2 User Interaction Flow
 1.	User opens the web application
-2.	Bot greets the user, and asks for input (compute, storage, etc.)
+2.	Bot greets the user with a Main Menu offering Cost Calculation or AI Chat.
 3.	User provides values
 4.	Bot calculates cost
 5.	Bot displays detailed breakdown
