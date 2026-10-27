@@ -1,1 +1,2 @@
-test -f README.md
+name: Check if README exists
+run: -f README.md
